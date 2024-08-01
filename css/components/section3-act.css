@@ -1,0 +1,71 @@
+.activities-in-marseille {
+  width: 100%;
+  display: grid;
+  padding: 30px;
+  gap: 30px;
+}
+
+.activities-cards {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+}
+
+.activities-cards a {
+  flex: 1;
+}
+
+.activities-cards .card {
+  width: 100%;
+  height: 439px;
+  display: grid;
+}
+
+.activities-cards .card img {
+  height: 380px;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.activities-cards .card .card-content {
+  height: auto;
+  padding: 20px 19px;
+  /* white-space: nowrap; */
+}
+
+/************ Media queries ***********/
+
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+  .activities-cards .card {
+    height: auto;
+  }
+
+  .activities-cards .card img {
+    height: 200px;
+  }
+
+  .activities-cards .card .card-content {
+    height: 70px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .activities-cards {
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin-inline: auto;
+  }
+
+  .activities-cards .card img {
+    height: 141px;
+  }
+
+  .activities-cards .card .card-content {
+    height: auto;
+  }
+}

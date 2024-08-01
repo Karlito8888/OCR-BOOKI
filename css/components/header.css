@@ -1,0 +1,94 @@
+.header-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 30px 50px;
+}
+.logo img {
+  height: 19px;
+  width: auto;
+}
+
+/* Navigation */
+.nav-buttons {
+  padding: 0 50px;
+  display: flex;
+  gap: 68px;
+}
+
+.nav-buttons .button {
+  height: 35px;
+  transition: color 0.5s;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.nav-buttons .button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.5s;
+}
+
+.nav-buttons .button:hover {
+  color: var(--main-color);
+}
+
+.nav-buttons .button:hover::before {
+  background-color: var(--main-color);
+}
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+
+@media (max-width: 1024px) {
+  /* pas de changement pour le header */
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .header-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Logo */
+
+  .logo {
+    padding: 30px;
+  }
+
+  /* Navigation */
+  .nav-buttons {
+    width: 100%;
+    padding: 0;
+    gap: initial;
+  }
+
+  .nav-buttons .button {
+    flex: 1;
+    height: 36px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .nav-buttons .button::before {
+    top: auto;
+    bottom: 0;
+    background-color: var(--main-bg-color);
+  }
+}
